@@ -4,6 +4,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
+import Check from './components/Check';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { useState } from 'react'; // this is a hook
 import { useTranslation } from 'react-i18next';
@@ -31,6 +32,7 @@ function App() {
           <Route path='/about' element={
             <>
                 <Header />
+                <Check name="Azarias"/>
                 <About />
             </>} />
         </Routes>
