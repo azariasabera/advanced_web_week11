@@ -1,23 +1,23 @@
 import { useState } from 'react'
 
 const MyHOC = (OriginalComponent) => {
-    /*const NewComponent = (props) => {
+    const NewComponent = ({name}) => {
     return (
         <>
             <div className='wrapper'>
-                <OriginalComponent {...props} />
+                <OriginalComponent {...name} />
             </div>
         </>
     )
     }
-  return NewComponent*/
-  return (props) => {
+  return NewComponent
+ /*  return ({name}) => {
     return (
             <div className='wrapper'>
-                <OriginalComponent {...props} />
+                <OriginalComponent {...name} />
             </div>
     )
-}
+} */
 };
 
 export default MyHOC
