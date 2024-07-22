@@ -20,11 +20,11 @@ function App() {
             <>
                 <Header />
                 <h1>{t("frontPage")}</h1>
-                <Test1 info={{
+                {/* <Test1 info={{
                     name: 'John Doe',
                     age: 30 }} 
                 />
-                <Test2 name="Jane Doe" age={25} />
+                <Test2 name="Jane Doe" age={25} /> */}
                 <MyContainer />
             </>
           } />
