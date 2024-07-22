@@ -37,6 +37,7 @@ function Header() {
               <Button
                 sx={{ my: 2, color: 'white', display: 'block', ml: 100 }}
                 onClick={() => changeLanguage('fi')}
+                id="fi"
               >
                 FI
               </Button>
@@ -44,6 +45,7 @@ function Header() {
               <Button
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 onClick={() => changeLanguage('en')}
+                id="en"
               >
                 EN
               </Button>
