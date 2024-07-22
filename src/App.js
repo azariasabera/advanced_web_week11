@@ -2,6 +2,7 @@ import './App.css';
 import MyContainer from './components/MyContainer';
 import Header from './components/Header';
 import About from './components/About';
+import Menu from './components/Menu';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { useState } from 'react'; // this is a hook
 
@@ -9,10 +10,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Menu />
         <Routes>
           <Route path='/' element={
             <>
+                <Header />
                 <h1>Hello World!</h1>
                 <Test1 info={{
                     name: 'John Doe',
@@ -22,7 +24,11 @@ function App() {
                 <MyContainer />
             </>
           } />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={
+            <>
+                <Header />
+                <About />
+            </>} />
         </Routes>
         
       </div>
