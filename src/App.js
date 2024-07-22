@@ -6,8 +6,10 @@ import Menu from './components/Menu';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { useState } from 'react'; // this is a hook
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t , i18n } = useTranslation();
   return (
     <Router>
       <div className="App">
@@ -17,13 +19,13 @@ function App() {
           <Route path='/' element={
             <>
                 <Header />
-                <h1>Hello World!</h1>
-                <Test1 info={{
+                <h1>{t("frontPage")}</h1>
+                {/* <Test1 info={{
                     name: 'John Doe',
                     age: 30 }} 
                 />
                 <Test2 name="Jane Doe" age={25} />
-                <MyContainer />
+                <MyContainer /> */}
             </>
           } />
           <Route path='/about' element={
