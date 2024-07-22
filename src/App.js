@@ -3,6 +3,7 @@ import MyContainer from './components/MyContainer';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { useState } from 'react'; // this is a hook
 
@@ -10,7 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Menu />
+        {/* <ResponsiveAppBar />
+        <Menu /> */}
         <Routes>
           <Route path='/' element={
             <>
