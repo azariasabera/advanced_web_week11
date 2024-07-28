@@ -10,8 +10,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import MyHOC from './components/MyHOC';
 
+
+
 function App() {
   const { t , i18n } = useTranslation();
+  const WrappedWithHOC = MyHOC(Check, {name: 'Ab'})
+
   return (
     <Router>
       <div className="App">
@@ -33,7 +37,7 @@ function App() {
           <Route path='/about' element={
             <>
                 <Header />
-                {/*<wrappedWithHOC />*/}
+                <WrappedWithHOC />
                 <About />
             </>} />
         </Routes>
@@ -42,8 +46,6 @@ function App() {
     </Router>
   );
 }
-
-// const wrappedWithHOC = MyHOC(Check, 'Ab')
 
 function Test1(props) {
   return (
