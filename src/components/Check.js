@@ -1,15 +1,8 @@
-import MyHOC from './MyHOC'
-
 function Check({name}) {
   return (
-    <>
-    Hello {name}!
-    <wrappedWithHOC />
-    </>
-
+    <div>{`Hello ${name}!`}
+    </div>
   )
 }
 
-const wrappedWithHOC = MyHOC(Check)
-
-export default MyHOC(Check)
+export default Check

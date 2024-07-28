@@ -8,6 +8,7 @@ import Check from './components/Check';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { useState } from 'react'; // this is a hook
 import { useTranslation } from 'react-i18next';
+import MyHOC from './components/MyHOC';
 
 function App() {
   const { t , i18n } = useTranslation();
@@ -32,7 +33,7 @@ function App() {
           <Route path='/about' element={
             <>
                 <Header />
-                <Check name="Azarias"/>
+                {/*<wrappedWithHOC />*/}
                 <About />
             </>} />
         </Routes>
@@ -41,6 +42,8 @@ function App() {
     </Router>
   );
 }
+
+// const wrappedWithHOC = MyHOC(Check, 'Ab')
 
 function Test1(props) {
   return (
@@ -59,5 +62,4 @@ function Test2(props) {
     </div>
   );
 }
-
 export default App;
